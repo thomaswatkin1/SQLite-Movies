@@ -17,7 +17,7 @@ def runTestQuery():
     while True:
         print("\nInput your SQL query, or type 0 to cancel:")
         query = input("> ")
-        if query == "0":
+        if query == "0" or query == "":
             print("Okay, returning to menu.")
             return
         try:  # If invalid, tries again - if not, breaks and commits
