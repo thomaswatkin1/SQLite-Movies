@@ -56,7 +56,6 @@ def displayAllRatingsForMovie():
                 where ratings.movie_id = {filmNo}"""
     c.execute(query)
     result = c.fetchall()
-    print(result)
 
     if str(result) != "[]":  # Checks whether there are any ratings to print from
         print(f"Here are all the ratings for {filmTitle}")
@@ -130,7 +129,6 @@ def addUsers():
                     conn.commit()
                     print("Entered.")
                     break
-                print("Okay, let's try again.")
             break
         except:
             print("Invalid number. Please try again.")
@@ -155,7 +153,6 @@ def addMovies():
                     conn.commit()
                     print("Entered.")
                     break
-                print("Okay, let's try again.")
             break
         except:
             print("Invalid number. Please try again.")
